@@ -1,0 +1,5 @@
+SNo,Type,Name,Description,VLANID,Static,Gateway,Subnet,DNS,StartIP,EndIP
+1,PXE,PXE,PXE,2202,0,,,,,
+2,Public LAN,Public LAN,Public LAN,2102,0,,,,,
+3,Hypervisor Migration,Hypervisor Migration,Hypervisor Migration,2105,0,,,,,
+4,Hypervisor Management,Hypervisor Management,Hypervisor Management,2106,1,172.21.95.254,255.255.240.0,172.21.34.10,172.21.82.1,172.21.82.10

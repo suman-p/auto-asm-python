@@ -1,0 +1,590 @@
+ <ServiceTemplate>
+      <id>${#TestCase#dynamic_TemplateID}</id>
+      <templateName>${#TestCase#Template_name}</templateName>
+      <templateDescription>${#TestCase#Template_name}</templateDescription>
+      <draft>false</draft>
+      <components>
+         <id>725ca0ba-b111-46b7-8b50-88487d422d36</id>
+         <componentID>component2</componentID>
+         <name>Server 1</name>
+         <type>SERVER</type>
+         <relatedComponents/>
+         <resources>
+            <id>asm::idrac</id>
+            <displayName>Hardware Settings</displayName>
+            <parameters>
+               <id>target_boot_device</id>
+               <value>SD</value>
+               <type>ENUMERATED</type>
+               <displayName>Target Boot Device</displayName>
+               <required>true</required>
+               <requiredAtDeployment>false</requiredAtDeployment>
+               <hideFromTemplate>false</hideFromTemplate>
+               <min>0</min>
+               <max>0</max>
+               <possibleValues>SD</possibleValues>
+               <possibleValues>HD</possibleValues>
+               <possibleValuesDisplayName>SD Card</possibleValuesDisplayName>
+               <possibleValuesDisplayName>Local Hard Drive</possibleValuesDisplayName>
+            </parameters>
+            <parameters>
+               <id>server_pool</id>
+               <value>${#Project#dynamic_PoolSeqId_3Server}</value>
+               <type>ENUMERATED</type>
+               <displayName>Server Pool</displayName>
+               <required>true</required>
+               <requiredAtDeployment>false</requiredAtDeployment>
+               <hideFromTemplate>false</hideFromTemplate>
+               <min>0</min>
+               <max>0</max>
+
+            </parameters>
+         </resources>
+         <resources>
+            <id>asm::server</id>
+            <displayName>OS Settings</displayName>
+            <parameters>
+               <id>product_key</id>
+               <type>STRING</type>
+               <displayName>Product Key</displayName>
+               <required>true</required>
+               <requiredAtDeployment>false</requiredAtDeployment>
+               <hideFromTemplate>false</hideFromTemplate>
+               <min>0</min>
+               <max>0</max>
+               <dependencyTarget>os_image_type</dependencyTarget>
+               <dependencyValue>hyperv</dependencyValue>
+            </parameters>
+            <parameters>
+               <id>timezone</id>
+               <value>Central Standard Time</value>
+               <type>ENUMERATED</type>
+               <displayName>Timezone</displayName>
+               <required>true</required>
+               <requiredAtDeployment>false</requiredAtDeployment>
+               <hideFromTemplate>false</hideFromTemplate>
+               <min>0</min>
+               <max>0</max>
+               <possibleValues>Dateline Standard Time</possibleValues>
+               <possibleValues>Samoa Standard Time</possibleValues>
+               <possibleValues>Hawaiian Standard Time</possibleValues>
+               <possibleValues>Alaskan Standard Time</possibleValues>
+               <possibleValues>Pacific Standard Time</possibleValues>
+               <possibleValues>Mountain Standard Time</possibleValues>
+               <possibleValues>Mexico Standard Time 2</possibleValues>
+               <possibleValues>U.S. Mountain Standard Time</possibleValues>
+               <possibleValues>Central Standard Time</possibleValues>
+               <possibleValues>Canada Central Standard Time</possibleValues>
+               <possibleValues>Mexico Standard Time</possibleValues>
+               <possibleValues>Central America Standard Time</possibleValues>
+               <possibleValues>Eastern Standard Time</possibleValues>
+               <possibleValues>U.S. Eastern Standard Time</possibleValues>
+               <possibleValues>S.A. Pacific Standard Time</possibleValues>
+               <possibleValues>Atlantic Standard Time</possibleValues>
+               <possibleValues>S.A. Western Standard Time</possibleValues>
+               <possibleValues>Pacific S.A. Standard Time</possibleValues>
+               <possibleValues>Newfoundland and Labrador Standard Time</possibleValues>
+               <possibleValues>E. South America Standard Time</possibleValues>
+               <possibleValues>S.A. Eastern Standard Time</possibleValues>
+               <possibleValues>Greenland Standard Time</possibleValues>
+               <possibleValues>Mid-Atlantic Standard Time</possibleValues>
+               <possibleValues>Azores Standard Time</possibleValues>
+               <possibleValues>Cape Verde Standard Time</possibleValues>
+               <possibleValues>GMT Standard Time</possibleValues>
+               <possibleValues>Greenwich Standard Time</possibleValues>
+               <possibleValues>Central Europe Standard Time</possibleValues>
+               <possibleValues>Central European Standard Time</possibleValues>
+               <possibleValues>Romance Standard Time</possibleValues>
+               <possibleValues>W. Europe Standard Time</possibleValues>
+               <possibleValues>W. Central Africa Standard Time</possibleValues>
+               <possibleValues>E. Europe Standard Time</possibleValues>
+               <possibleValues>Egypt Standard Time</possibleValues>
+               <possibleValues>FLE Standard Time</possibleValues>
+               <possibleValues>GTB Standard Time</possibleValues>
+               <possibleValues>Israel Standard Time</possibleValues>
+               <possibleValues>South Africa Standard Time</possibleValues>
+               <possibleValues>Russian Standard Time</possibleValues>
+               <possibleValues>Arab Standard Time</possibleValues>
+               <possibleValues>E. Africa Standard Time</possibleValues>
+               <possibleValues>Arabic Standard Time</possibleValues>
+               <possibleValues>Iran Standard Time</possibleValues>
+               <possibleValues>Arabian Standard Time</possibleValues>
+               <possibleValues>Caucasus Standard Time</possibleValues>
+               <possibleValues>Transitional Islamic State of Afghanistan Standard Time</possibleValues>
+               <possibleValues>Ekaterinburg Standard Time</possibleValues>
+               <possibleValues>West Asia Standard Time</possibleValues>
+               <possibleValues>India Standard Time</possibleValues>
+               <possibleValues>Nepal Standard Time</possibleValues>
+               <possibleValues>Central Asia Standard Time</possibleValues>
+               <possibleValues>Sri Lanka Standard Time</possibleValues>
+               <possibleValues>N. Central Asia Standard Time</possibleValues>
+               <possibleValues>Myanmar Standard Time</possibleValues>
+               <possibleValues>S.E. Asia Standard Time</possibleValues>
+               <possibleValues>North Asia Standard Time</possibleValues>
+               <possibleValues>China Standard Time</possibleValues>
+               <possibleValues>Singapore Standard Time</possibleValues>
+               <possibleValues>Taipei Standard Time</possibleValues>
+               <possibleValues>W. Australia Standard Time</possibleValues>
+               <possibleValues>North Asia East Standard Time</possibleValues>
+               <possibleValues>Korea Standard Time</possibleValues>
+               <possibleValues>Tokyo Standard Time</possibleValues>
+               <possibleValues>Yakutsk Standard Time</possibleValues>
+               <possibleValues>A.U.S. Central Standard Time</possibleValues>
+               <possibleValues>Cen. Australia Standard Time</possibleValues>
+               <possibleValues>A.U.S. Eastern Standard Time</possibleValues>
+               <possibleValues>E. Australia Standard Time</possibleValues>
+               <possibleValues>Tasmania Standard Time</possibleValues>
+               <possibleValues>Vladivostok Standard Time</possibleValues>
+               <possibleValues>West Pacific Standard Time</possibleValues>
+               <possibleValues>Central Pacific Standard Time</possibleValues>
+               <possibleValues>Fiji Islands Standard Time</possibleValues>
+               <possibleValues>New Zealand Standard Time</possibleValues>
+               <possibleValues>Tonga Standard Time</possibleValues>
+               <possibleValuesDisplayName>(GMT-12:00) International Date Line West</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT-11:00) Midway Island, Samoa</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT-10:00) Hawaii</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT-09:00) Alaska</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT-08:00) Pacific Time (US and Canada); Tijuana</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT-07:00) Mountain Time (US and Canada)</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT-07:00) Chihuahua, La Paz, Mazatlan</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT-07:00) Arizona</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT-06:00) Central Time (US and Canada</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT-06:00) Saskatchewan</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT-06:00) Guadalajara, Mexico City, Monterrey</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT-06:00) Central America</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT-05:00) Eastern Time (US and Canada)</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT-05:00) Indiana (East)</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT-05:00) Bogota, Lima, Quito</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT-04:00) Atlantic Time (Canada)</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT-04:00) Caracas, La Paz</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT-04:00) Santiago</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT-03:30) Newfoundland and Labrador</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT-03:00) Brasilia</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT-03:00) Buenos Aires, Georgetown</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT-03:00) Greenland</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT-02:00) Mid-Atlantic</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT-01:00) Azores</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT-01:00) Cape Verde Islands</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT) Greenwich Mean Time: Dublin, Edinburgh, Lisbon, London</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT) Casablanca, Monrovia</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+01:00) Sarajevo, Skopje, Warsaw, Zagreb</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+01:00) Brussels, Copenhagen, Madrid, Paris</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+01:00) West Central Africa</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+02:00) Bucharest</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+02:00) Cairo</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+02:00) Helsinki, Kiev, Riga, Sofia, Tallinn, Vilnius</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+02:00) Athens, Istanbul, Minsk</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+02:00) Jerusalem</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+02:00) Harare, Pretoria</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+03:00) Moscow, St. Petersburg, Volgograd</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+03:00) Kuwait, Riyadh</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+03:00) Nairobi</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+03:00) Baghdad</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+03:30) Tehran</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+04:00) Abu Dhabi, Muscat</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+04:00) Baku, Tbilisi, Yerevan</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+04:30) Kabul</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+05:00) Ekaterinburg</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+05:00) Islamabad, Karachi, Tashkent</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+05:45) Kathmandu</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+06:00) Astana, Dhaka</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+06:00) Sri Jayawardenepura</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+06:00) Almaty, Novosibirsk</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+06:30) Yangon Rangoon</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+07:00) Bangkok, Hanoi, Jakarta</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+07:00) Krasnoyarsk</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+08:00) Beijing, Chongqing, Hong Kong SAR, Urumqi</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+08:00) Kuala Lumpur, Singapore</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+08:00) Taipei</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+08:00) Perth</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+08:00) Irkutsk, Ulaanbaatar</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+09:00) Seoul</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+09:00) Osaka, Sapporo, Tokyo</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+09:00) Yakutsk</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+09:30) Darwin</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+09:30) Adelaide</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+10:00) Canberra, Melbourne, Sydney</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+10:00) Brisbane</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+10:00) Hobart</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+10:00) Vladivostok</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+10:00) Guam, Port Moresby</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+11:00) Magadan, Solomon Islands, New Caledonia</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+12:00) Fiji Islands, Kamchatka, Marshall Islands</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+12:00) Auckland, Wellington</possibleValuesDisplayName>
+               <possibleValuesDisplayName>(GMT+13:00) Nuku'alofa</possibleValuesDisplayName>
+               <dependencyTarget>os_image_type</dependencyTarget>
+               <dependencyValue>hyperv</dependencyValue>
+            </parameters>
+            <parameters>
+               <id>ntp</id>
+               <type>STRING</type>
+               <displayName>NTP Server</displayName>
+               <required>true</required>
+               <requiredAtDeployment>false</requiredAtDeployment>
+               <hideFromTemplate>false</hideFromTemplate>
+               <min>0</min>
+               <max>0</max>
+               <dependencyTarget>os_image_type</dependencyTarget>
+               <dependencyValue>hyperv</dependencyValue>
+            </parameters>
+            <parameters>
+               <id>language</id>
+               <value>en-US</value>
+               <type>ENUMERATED</type>
+               <displayName>Language</displayName>
+               <required>true</required>
+               <requiredAtDeployment>false</requiredAtDeployment>
+               <hideFromTemplate>false</hideFromTemplate>
+               <min>0</min>
+               <max>0</max>
+               <possibleValues>en-US</possibleValues>
+               <possibleValues>de-DE</possibleValues>
+               <possibleValuesDisplayName>English (United States)</possibleValuesDisplayName>
+               <possibleValuesDisplayName>German (Germany)</possibleValuesDisplayName>
+               <dependencyTarget>os_image_type</dependencyTarget>
+               <dependencyValue>hyperv</dependencyValue>
+            </parameters>
+            <parameters>
+               <id>keyboard</id>
+               <value>00000409</value>
+               <type>ENUMERATED</type>
+               <displayName>Keyboard</displayName>
+               <required>true</required>
+               <requiredAtDeployment>false</requiredAtDeployment>
+               <hideFromTemplate>false</hideFromTemplate>
+               <min>0</min>
+               <max>0</max>
+               <possibleValues>00000409</possibleValues>
+               <possibleValuesDisplayName>U.S. English</possibleValuesDisplayName>
+               <dependencyTarget>os_image_type</dependencyTarget>
+               <dependencyValue>hyperv</dependencyValue>
+            </parameters>
+            <parameters>
+               <id>domain_name</id>
+               <type>STRING</type>
+               <displayName>Domain Name</displayName>
+               <required>false</required>
+               <requiredAtDeployment>false</requiredAtDeployment>
+               <hideFromTemplate>false</hideFromTemplate>
+               <min>0</min>
+               <max>0</max>
+               <dependencyTarget>os_image_type</dependencyTarget>
+               <dependencyValue>hyperv</dependencyValue>
+            </parameters>
+            <parameters>
+               <id>fqdn</id>
+               <type>STRING</type>
+               <displayName>FQ Domain Name</displayName>
+               <required>false</required>
+               <requiredAtDeployment>false</requiredAtDeployment>
+               <hideFromTemplate>false</hideFromTemplate>
+               <min>0</min>
+               <max>0</max>
+               <dependencyTarget>os_image_type</dependencyTarget>
+               <dependencyValue>hyperv</dependencyValue>
+            </parameters>
+            <parameters>
+               <id>domain_admin_user</id>
+               <type>STRING</type>
+               <displayName>Domain Admin Username</displayName>
+               <required>true</required>
+               <requiredAtDeployment>false</requiredAtDeployment>
+               <hideFromTemplate>false</hideFromTemplate>
+               <min>0</min>
+               <max>0</max>
+               <dependencyTarget>os_image_type</dependencyTarget>
+               <dependencyValue>hyperv</dependencyValue>
+            </parameters>
+            <parameters>
+               <id>domain_admin_password</id>
+               <type>PASSWORD</type>
+			   <value>Dell1234</value>
+               <displayName>Domain Admin Password</displayName>
+               <required>true</required>
+               <requiredAtDeployment>false</requiredAtDeployment>
+               <hideFromTemplate>false</hideFromTemplate>
+               <min>0</min>
+               <max>0</max>
+               <dependencyTarget>os_image_type</dependencyTarget>
+               <dependencyValue>hyperv</dependencyValue>
+            </parameters>
+            <parameters>
+               <id>domain_admin_password_confirm</id>
+               <type>PASSWORD</type>
+			   <value>Dell1234</value>
+               <displayName>Domain Admin Password Confirm</displayName>
+               <required>true</required>
+               <requiredAtDeployment>false</requiredAtDeployment>
+               <hideFromTemplate>false</hideFromTemplate>
+               <min>0</min>
+               <max>0</max>
+               <dependencyTarget>os_image_type</dependencyTarget>
+               <dependencyValue>hyperv</dependencyValue>
+            </parameters>
+            <parameters>
+               <id>os_host_name</id>
+			   <value>arthiOSHostnameAuto1</value>
+               <type>STRING</type>
+               <displayName>Host Name</displayName>
+               <required>true</required>
+               <requiredAtDeployment>true</requiredAtDeployment>
+               <hideFromTemplate>true</hideFromTemplate>
+               <min>0</min>
+               <max>0</max>
+            </parameters>
+            <parameters>
+               <id>admin_password</id>
+               <type>PASSWORD</type>
+			   <value>Dell1234</value>
+               <displayName>Administrator password</displayName>
+               <required>true</required>
+               <requiredAtDeployment>false</requiredAtDeployment>
+               <hideFromTemplate>false</hideFromTemplate>
+               <min>0</min>
+               <max>0</max>
+            </parameters>
+            <parameters>
+               <id>admin_confirm_password</id>
+               <type>PASSWORD</type>
+			   <value>Dell1234</value>
+               <displayName>Confirm administrator password</displayName>
+               <required>true</required>
+               <requiredAtDeployment>false</requiredAtDeployment>
+               <hideFromTemplate>false</hideFromTemplate>
+               <min>0</min>
+               <max>0</max>
+            </parameters>
+            <parameters>
+               <id>razor_image</id>
+               <value>${#TestCase#server_razor_image}</value>
+               <type>ENUMERATED</type>
+               <displayName>OS Image</displayName>
+               <required>true</required>
+               <requiredAtDeployment>false</requiredAtDeployment>
+               <hideFromTemplate>false</hideFromTemplate>
+               <min>0</min>
+               <max>0</max>
+               <possibleValues>-1</possibleValues>
+               <possibleValues>esxi-5.1</possibleValues>
+               <possibleValues>esxi-5.5</possibleValues>
+               <possibleValues>rhel-65</possibleValues>
+               <possibleValuesDisplayName>Select...</possibleValuesDisplayName>
+               <possibleValuesDisplayName>esxi-5.1</possibleValuesDisplayName>
+               <possibleValuesDisplayName>esxi-5.5</possibleValuesDisplayName>
+               <possibleValuesDisplayName>rhel-65</possibleValuesDisplayName>
+            </parameters>
+            <parameters>
+               <id>os_image_type</id>
+               <value>vmware_esxi</value>
+               <type>ENUMERATED</type>
+               <displayName>OS Image Type</displayName>
+               <required>true</required>
+               <requiredAtDeployment>false</requiredAtDeployment>
+               <hideFromTemplate>false</hideFromTemplate>
+               <min>0</min>
+               <max>0</max>
+               <possibleValues>-1</possibleValues>
+               <possibleValues>vmware_esxi</possibleValues>
+               <possibleValues>redhat</possibleValues>
+               <possibleValues>windows</possibleValues>
+               <possibleValues>hyperv</possibleValues>
+               <possibleValuesDisplayName>Select...</possibleValuesDisplayName>
+               <possibleValuesDisplayName>ESXi</possibleValuesDisplayName>
+               <possibleValuesDisplayName>Red Hat</possibleValuesDisplayName>
+               <possibleValuesDisplayName>Windows</possibleValuesDisplayName>
+               <possibleValuesDisplayName>Hyper-V</possibleValuesDisplayName>
+            </parameters>
+            <parameters>
+               <id>esx_mem</id>
+               <value>false</value>
+               <type>ENUMERATED</type>
+               <displayName>Install EqualLogic MEM</displayName>
+               <required>true</required>
+               <requiredAtDeployment>false</requiredAtDeployment>
+               <hideFromTemplate>false</hideFromTemplate>
+               <min>0</min>
+               <max>0</max>
+               <possibleValues/>
+               <possibleValues>true</possibleValues>
+               <possibleValues>false</possibleValues>
+               <possibleValuesDisplayName>Select...</possibleValuesDisplayName>
+               <possibleValuesDisplayName>True</possibleValuesDisplayName>
+               <possibleValuesDisplayName>False</possibleValuesDisplayName>
+               <dependencyTarget>os_image_type</dependencyTarget>
+               <dependencyValue>vmware_esxi</dependencyValue>
+            </parameters>			
+            <parameters>
+               <id>custom_script</id>
+               <type>TEXT</type>
+               <displayName>Custom OS Installation script</displayName>
+               <required>false</required>
+               <requiredAtDeployment>false</requiredAtDeployment>
+               <hideFromTemplate>false</hideFromTemplate>
+               <min>0</min>
+               <max>0</max>
+            </parameters>
+         </resources>
+         <resources>
+            <id>asm::esxiscsiconfig</id>
+            <displayName>Network Settings</displayName>
+            <parameters>
+               <id>identity_pool</id>
+               <value>-1</value>
+               <type>ENUMERATED</type>
+               <displayName>Identity Pool</displayName>
+               <required>true</required>
+               <requiredAtDeployment>false</requiredAtDeployment>
+               <hideFromTemplate>false</hideFromTemplate>
+               <min>0</min>
+               <max>0</max>
+               <possibleValues>-1</possibleValues>
+               <possibleValuesDisplayName>Global</possibleValuesDisplayName>
+            </parameters>
+            <parameters>
+               <id>hypervisor_network</id>
+               <value>ff808081451c9efe01451ca20a1f0002</value>
+               <type>ENUMERATED</type>
+               <displayName>Hypervisor Management Network</displayName>
+               <required>true</required>
+               <requiredAtDeployment>false</requiredAtDeployment>
+               <hideFromTemplate>false</hideFromTemplate>
+               <min>0</min>
+               <max>0</max>
+               <possibleValues>-1</possibleValues>
+               <possibleValues>ff808081451c9efe01451ca20a1f0002</possibleValues>
+               <possibleValuesDisplayName>Select...</possibleValuesDisplayName>
+               <possibleValuesDisplayName>hype</possibleValuesDisplayName>
+               <dependencyTarget>os_image_type</dependencyTarget>
+               <dependencyValue>vmware_esxi</dependencyValue>
+            </parameters>
+            <parameters>
+               <id>vmotion_network</id>
+               <value>ff808081451c9efe01451ca136a10001</value>
+               <type>ENUMERATED</type>
+               <displayName>Hypervisor vMotion Network</displayName>
+               <required>true</required>
+               <requiredAtDeployment>false</requiredAtDeployment>
+               <hideFromTemplate>false</hideFromTemplate>
+               <min>0</min>
+               <max>0</max>
+               <possibleValues>-1</possibleValues>
+               <possibleValues>ff808081451c9efe01451ca136a10001</possibleValues>
+               <possibleValues>ff808081451c9efe01451ca20a1f0002</possibleValues>
+               <possibleValuesDisplayName>Select...</possibleValuesDisplayName>
+               <possibleValuesDisplayName>vmot</possibleValuesDisplayName>
+               <possibleValuesDisplayName>hype</possibleValuesDisplayName>
+               <dependencyTarget>os_image_type</dependencyTarget>
+               <dependencyValue>vmware_esxi</dependencyValue>
+            </parameters>
+            <parameters>
+               <id>storage_network</id>
+               <value>ff808081451c9efe01451ca24d6c0018</value>
+               <type>ENUMERATED</type>
+               <displayName>Storage Network</displayName>
+               <required>true</required>
+               <requiredAtDeployment>false</requiredAtDeployment>
+               <hideFromTemplate>false</hideFromTemplate>
+               <min>0</min>
+               <max>0</max>
+               <possibleValues>-1</possibleValues>
+               <possibleValues>ff808081451c9efe01451ca24d6c0018</possibleValues>
+               <possibleValuesDisplayName>Select...</possibleValuesDisplayName>
+               <possibleValuesDisplayName>iscsi</possibleValuesDisplayName>
+            </parameters>
+            <parameters>
+               <id>pxe_network</id>
+               <value>ff808081451c9efe01451ca0bd480000</value>
+               <type>ENUMERATED</type>
+               <displayName>PXE Network</displayName>
+               <required>true</required>
+               <requiredAtDeployment>false</requiredAtDeployment>
+               <hideFromTemplate>false</hideFromTemplate>
+               <min>0</min>
+               <max>0</max>
+               <possibleValues>-1</possibleValues>
+               <possibleValues>ff808081451c9efe01451ca0bd480000</possibleValues>
+               <possibleValues>ff808081451c9efe01451ca136a10001</possibleValues>
+               <possibleValues>ff808081451c9efe01451ca2a63d0019</possibleValues>
+               <possibleValuesDisplayName>Select...</possibleValuesDisplayName>
+               <possibleValuesDisplayName>pxe</possibleValuesDisplayName>
+               <possibleValuesDisplayName>vmot</possibleValuesDisplayName>
+               <possibleValuesDisplayName>workload</possibleValuesDisplayName>
+            </parameters>
+            <parameters>
+               <id>workload_network</id>
+               <value>,ff808081451c9efe01451ca2a63d0019</value>
+               <type>LIST</type>
+               <displayName>Workload Networks</displayName>
+               <required>true</required>
+               <requiredAtDeployment>false</requiredAtDeployment>
+               <hideFromTemplate>false</hideFromTemplate>
+               <min>0</min>
+               <max>0</max>
+               <possibleValues>ff808081451c9efe01451ca0bd480000</possibleValues>
+               <possibleValues>ff808081451c9efe01451ca136a10001</possibleValues>
+               <possibleValues>ff808081451c9efe01451ca2a63d0019</possibleValues>
+               <possibleValuesDisplayName>pxe</possibleValuesDisplayName>
+               <possibleValuesDisplayName>vmot</possibleValuesDisplayName>
+               <possibleValuesDisplayName>workload</possibleValuesDisplayName>
+            </parameters>
+            <parameters>
+               <id>converged_network</id>
+               <value>-1</value>
+               <type>ENUMERATED</type>
+               <displayName>Hypervisor Management Network</displayName>
+               <required>true</required>
+               <requiredAtDeployment>false</requiredAtDeployment>
+               <hideFromTemplate>false</hideFromTemplate>
+               <min>0</min>
+               <max>0</max>
+               <possibleValues>-1</possibleValues>
+               <possibleValues>ff808081451c9efe01451ca20a1f0002</possibleValues>
+               <possibleValuesDisplayName>Select...</possibleValuesDisplayName>
+               <possibleValuesDisplayName>hype</possibleValuesDisplayName>
+               <dependencyTarget>os_image_type</dependencyTarget>
+               <dependencyValue>hyperv</dependencyValue>
+            </parameters>
+            <parameters>
+               <id>private_cluster_network</id>
+               <value>-1</value>
+               <type>ENUMERATED</type>
+               <displayName>Cluster Private Network</displayName>
+               <required>true</required>
+               <requiredAtDeployment>false</requiredAtDeployment>
+               <hideFromTemplate>false</hideFromTemplate>
+               <min>0</min>
+               <max>0</max>
+               <possibleValues>-1</possibleValues>
+               <possibleValues>ff808081451c9efe01451ca0bd480000</possibleValues>
+               <possibleValues>ff808081451c9efe01451ca136a10001</possibleValues>
+               <possibleValues>ff808081451c9efe01451ca2a63d0019</possibleValues>
+               <possibleValuesDisplayName>Select...</possibleValuesDisplayName>
+               <possibleValuesDisplayName>pxe</possibleValuesDisplayName>
+               <possibleValuesDisplayName>vmot</possibleValuesDisplayName>
+               <possibleValuesDisplayName>workload</possibleValuesDisplayName>
+               <dependencyTarget>os_image_type</dependencyTarget>
+               <dependencyValue>hyperv</dependencyValue>
+            </parameters>
+            <parameters>
+               <id>live_migration_network</id>
+               <value>-1</value>
+               <type>ENUMERATED</type>
+               <displayName>Live Migration Network</displayName>
+               <required>true</required>
+               <requiredAtDeployment>false</requiredAtDeployment>
+               <hideFromTemplate>false</hideFromTemplate>
+               <min>0</min>
+               <max>0</max>
+               <possibleValues>-1</possibleValues>
+               <possibleValues>ff808081451c9efe01451ca20a1f0002</possibleValues>
+               <possibleValuesDisplayName>Select...</possibleValuesDisplayName>
+               <possibleValuesDisplayName>hype</possibleValuesDisplayName>
+               <dependencyTarget>os_image_type</dependencyTarget>
+               <dependencyValue>hyperv</dependencyValue>
+            </parameters>
+         </resources>
+      </components>
+   </ServiceTemplate>

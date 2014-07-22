@@ -1,0 +1,8 @@
+<urls>
+	<url name="Discovery" uri="/AsmManager/DiscoveryRequest"/>
+	<url name="Credential" uri = "/AsmManager/credential"/>
+	<url name="ManagedDevice" uri = "/AsmManager/ManagedDevice"/>
+	<url name = "Network" uri = "/VirtualServices/Network"/>
+	<url name="Timezone" uri = "/alcm/timezone"/>
+	<url name="NTP" uri = "/alcm/ntp"/>
+</urls>

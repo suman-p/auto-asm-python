@@ -1,0 +1,8 @@
+<Network xmlns="http://pg.dell.com/asm/virtualservices/network">
+	<Id/>
+	<Name>nw_name</Name>
+	<Description>nw_desc</Description>
+	<Type>nw_type</Type>
+	<VlanId>nw_vlan</VlanId>
+	<Static>nw_static</Static>
+</Network>
